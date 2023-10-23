@@ -332,7 +332,7 @@ void execute_command(command *x) // Execute the command
 
     // for the child_process = 0
     // close all the pipes
-    for (i = 0; i < commands; i++)
+    for (i = 0; i < commands-1; i++)
     {
         close(pipeline[i][0]);
         close(pipeline[i][1]);
